@@ -1,0 +1,12 @@
+spring-security-angular/.gradle
+spring-security-angular/build/
+!spring-security-angular/gradle/wrapper/gradle-wrapper.jar
+
+### IntelliJ IDEA ###
+spring-security-angular/.idea
+spring-security-angular/*.iws
+spring-security-angular/*.iml
+spring-security-angular/*.ipr
+spring-security-angular/out/
+
+spring-security-angular-ui/node_modules/**
