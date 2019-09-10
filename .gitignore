@@ -1,4 +1,5 @@
 spring-security-angular/.gradle
+spring-security-angular/gradle
 spring-security-angular/build/
 !spring-security-angular/gradle/wrapper/gradle-wrapper.jar
 
