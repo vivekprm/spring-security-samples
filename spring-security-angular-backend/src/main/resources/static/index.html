@@ -21,7 +21,9 @@
     </div>
     <script type="text/javascript" src="/webjars/angularjs/angular.min.js"></script>
     <script type="text/javascript">
-        angular.module("app", []).controller("home", function($http){
+        angular.module("app", []).config(function($httpProvider) {
+            $httpProvider.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
+        }).controller("home", function($http){
             var self = this;
             $http.get("/greeting").then(function(response) {
                 self.greeting = response.data;

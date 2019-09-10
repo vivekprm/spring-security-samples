@@ -3,16 +3,17 @@ spring-security-angular/build/
 !spring-security-angular/gradle/wrapper/gradle-wrapper.jar
 
 ### IntelliJ IDEA ###
-spring-security-angular/.idea
+spring-security-angular/.idea/
 spring-security-angular/*.iws
 spring-security-angular/*.iml
 spring-security-angular/*.ipr
 spring-security-angular/out/
 
 spring-security-angular-ui/node_modules/**
-spring-security-angular-backend/.idea
-spring-security-angular-backend/.idea/**
+spring-security-angular-backend/.idea/
 spring-security-angular-backend/*.iml
 spring-security-angular-backend/*.ipr
 spring-security-angular-backend/*.iws
 spring-security-angular-backend/target
+spring-security-angular-backend/target/
+spring-security-angular-backend/gradle
