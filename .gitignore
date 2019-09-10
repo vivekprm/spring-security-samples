@@ -10,3 +10,9 @@ spring-security-angular/*.ipr
 spring-security-angular/out/
 
 spring-security-angular-ui/node_modules/**
+spring-security-angular-backend/.idea
+spring-security-angular-backend/.idea/**
+spring-security-angular-backend/*.iml
+spring-security-angular-backend/*.ipr
+spring-security-angular-backend/*.iws
+spring-security-angular-backend/target
