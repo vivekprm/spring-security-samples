@@ -8,7 +8,10 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class AppComponent {
   title = 'Spring security with angular demo';
-  greeting = {};
+  greeting: any = {
+    id: '',
+    content: ''
+  };
   constructor(private http: HttpClient) {
     const httpOptions = {
       headers: new HttpHeaders({
