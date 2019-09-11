@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { AppService } from '../../services/app.service';
+import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,42 +9,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Spring security with angular demo';
-  authenticated = false;
-  greeting: any = {
-    id: '',
-    content: ''
-  };
-  credentials: any = {
-    username: '',
-    password: ''
-  };
-
-  constructor(private http: HttpClient, private router: Router) {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'X-Requested-With':  'XMLHttpRequest'
-      })
-    };
-    http.get('api/greeting', httpOptions).subscribe(data => this.greeting = data);
-  }
-  login() {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'X-Requested-With':  'XMLHttpRequest',
-        authorization: 'Basic '
-              + btoa(this.credentials.username + ':' + this.credentials.password)
-      })
-    };
-    this.http.get('api/greeting', httpOptions).subscribe((response) => {
-      this.greeting = response;
-      this.authenticated = true;
-    });
-  }
-  logout() {
-    this.http.post('logout', {}).subscribe(() => {
-        this.authenticated = false;
-        this.router.navigateByUrl('/');
-    });
-  }
+  constructor(private app: AppService, private http: HttpClient, private router: Router) {
+      this.app.authenticate(undefined, undefined);
+    }
+    logout() {
+      this.http.post('logout', {}).subscribe(() => {
+          this.app.authenticated = false;
+          this.router.navigateByUrl('/login');
+      });
+    }
+    authenticated() {
+      return this.app.authenticated;
+    }
 }
