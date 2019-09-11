@@ -1,30 +1,10 @@
 <div class="container">
-  <ul class="nav nav-pills" role="tablist">
-    <li class="active"><a routerLinkActive="active" routerLink="/home">Home</a></li>
-    <li><a routerLink="/login">Login</a></li>
-    <li><a (click)="logout()">Logout</a></li>
+  <ul class="nav nav-pills">
+    <li><a routerLinkActive="active" routerLink="/home">Home</a></li>
+    <li><a routerLink="/login" *ngIf="!authenticated()">Login</a></li>
+    <li><a (click)="logout()" *ngIf="authenticated()">Logout</a></li>
   </ul>
 </div>
-<!--div class="container">
+<div class="container">
   <router-outlet></router-outlet>
-</div-->
-<div class="container" [hidden]=authenticated>
-  <div class="alert alert-danger" [hidden]="!error">
-    There was a problem logging in. Please try again.
-  </div>
-  <form role="form" (submit)="login()" [hidden]=authenticated>
-    <div class="form-group">
-      <label for="username">Username:</label>
-      <input type="text" class="form-control" id="username" name="username" [(ngModel)]="credentials.username"/>
-    </div>
-    <div class="form-group">
-      <label for="password">Password:</label>
-      <input type="password" class="form-control" id="password" name="password" [(ngModel)]="credentials.password"/>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
-</div>
-<div class="container" [hidden]=!authenticated>
-  <p>Id: <span>{{greeting.id}}</span></p>
-  <p>Message: <span>{{greeting.content}}!</span></p>
 </div>
