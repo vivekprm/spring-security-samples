@@ -3,6 +3,7 @@ package com.spring.security.demo.config;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 
 @Configuration
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
@@ -14,6 +15,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
             .authorizeRequests()
                 .antMatchers("/index.html", "/home.html", "/login.html", "/").permitAll()
                 .antMatchers("/*.js", "/*.css").permitAll()
-                .anyRequest().authenticated();
+                .anyRequest().authenticated()
+        .and()
+                .csrf().csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
+        .and()
+                .logout().logoutSuccessUrl("/");
     }
 }
