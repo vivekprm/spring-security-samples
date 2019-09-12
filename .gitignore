@@ -20,3 +20,13 @@ spring-security-angular-backend/*.iws
 spring-security-angular-backend/target
 spring-security-angular-backend/target/
 spring-security-angular-backend/gradle
+
+gateway-ui-resource/gateway-ui/.idea
+gateway-ui-resource/gateway-ui/target
+gateway-ui-resource/gateway-ui/.mvn
+gateway-ui-resource/gateway-ui/*.iml
+
+gateway-ui-resource/resourceserver/.idea
+gateway-ui-resource/resourceserver/target
+gateway-ui-resource/resourceserver/.mvn
+gateway-ui-resource/resourceserver/*.iml
