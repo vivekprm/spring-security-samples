@@ -12,7 +12,9 @@ This project uses UI code created above and separated out APIs as a separate ser
 
 Project is very basic just to understand the architecture so you might find some hardcodings etc. And it can be improved by using api gateways like [Zuul](https://github.com/Netflix/zuul)
 
-Please refer architecture diagram for complete understanding.
+Please refer below architecture diagram for complete understanding.
+
+![alt text](https://github.com/vivekprm/spring-security-samples/blob/master/gateway-ui-resource/architecture-diagram.png)
 
 # proxy-ui-resource
 This project is same as gateway-ui-resource architecturally. However, here we are using Zuul as our gateway. Which is better than the previous approach.
