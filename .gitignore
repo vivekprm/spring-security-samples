@@ -30,3 +30,13 @@ gateway-ui-resource/resourceserver/.idea
 gateway-ui-resource/resourceserver/target
 gateway-ui-resource/resourceserver/.mvn
 gateway-ui-resource/resourceserver/*.iml
+
+proxy-ui-resource/proxy-resource/.idea
+proxy-ui-resource/proxy-resource/.gradle
+proxy-ui-resource/proxy-resource/gradle
+proxy-ui-resource/proxy-resource/target
+
+proxy-ui-resource/proxy-ui/.idea
+proxy-ui-resource/proxy-ui/.gradle
+proxy-ui-resource/proxy-ui/gradle
+proxy-ui-resource/proxy-ui/target
