@@ -1,6 +1,6 @@
 # spring-security-samples
 
-This is sample spring security project explained in Dave Syer video below:
+This repository is created to improve my understanding of the spring-security talk given by Dave Syer:
 
 https://www.youtube.com/watch?v=x3pYcp1LopU&t=809s
 
