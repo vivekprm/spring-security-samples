@@ -10,6 +10,8 @@ https://www.youtube.com/watch?v=x3pYcp1LopU&t=809s
 # gateway-ui-resource
 This project uses UI code created above and separated out APIs as a separate service (resourceserver). Login is handled at gateway level and session is stored in REDIS for communication.
 
+Project is very basic just to understand the architecture so you might find some hardcodings etc. And it can be improved by using api gateways like [Zuul](https://github.com/Netflix/zuul)
+
 Please refer architecture diagram for complete understanding.
 
 # Angular 2
