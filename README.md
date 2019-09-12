@@ -14,6 +14,24 @@ Project is very basic just to understand the architecture so you might find some
 
 Please refer architecture diagram for complete understanding.
 
+# proxy-ui-resource
+This project is same as gateway-ui-resource architecturally. However, here we are using Zuul as our gateway. Which is better than the previous approach.
+
+Zuul is a JVM-based router and server-side load balancer from Netflix.
+
+Netflix uses Zuul for the following:
+* Authentication
+* Insights
+* Stress Testing
+* Canary Testing
+* Dynamic Routing
+* Service Migration
+* Load Shedding
+* Security
+* Static Response handling
+* Active/Active traffic management
+
+
 # Angular 2
 <b>spring-security-angular</b> contains backend code in spring boot 2.1.8.
 <b>spring-security-angular-ui</b> contains frontend code written in angular 2. We can build the code in it and package everything as part of spring-security-angular project.
