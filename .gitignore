@@ -40,3 +40,13 @@ proxy-ui-resource/proxy-ui/.idea
 proxy-ui-resource/proxy-ui/.gradle
 proxy-ui-resource/proxy-ui/gradle
 proxy-ui-resource/proxy-ui/target
+
+ssl-application/.idea
+ssl-application/.gradle
+ssl-application/gradle
+ssl-application/target
+
+spring-oauth2/auth-server/.idea
+spring-oauth2/auth-server/.gradle
+spring-oauth2/auth-server/gradle
+spring-oauth2/auth-server/target
