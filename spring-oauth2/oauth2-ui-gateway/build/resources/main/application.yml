@@ -1,0 +1,25 @@
+debug: true
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.springframework.web: DEBUG
+security:
+  user:
+    password: password
+  oauth2:
+    client:
+      accessTokenUri: http://localhost:9999/uaa/oauth/token
+      userAuthorizationUri: http://localhost:9999/uaa/oauth/authorize
+      clientId: acme
+      clientSecret: acmesecret
+    resource:
+      userInfoUri: http://localhost:9999/uaa/user
+zuul:
+  routes:
+    resource:
+      path: /api/**
+      url: http://localhost:9000/api
+      sensitiveHeaders: X-Requested-With
+    user:
+      path: /user/**
+      url: http://localhost:9999/uaa/user
