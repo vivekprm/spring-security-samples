@@ -1,6 +1,7 @@
 .idea
 .gradle
 gradle
+*.iml
 
 spring-security-angular/.gradle
 spring-security-angular/gradle
@@ -39,28 +40,34 @@ proxy-ui-resource/proxy-resource/.idea
 proxy-ui-resource/proxy-resource/.gradle
 proxy-ui-resource/proxy-resource/gradle
 proxy-ui-resource/proxy-resource/target
+proxy-ui-resource/proxy-resource/*.iml
 
 proxy-ui-resource/proxy-ui/.idea
 proxy-ui-resource/proxy-ui/.gradle
 proxy-ui-resource/proxy-ui/gradle
 proxy-ui-resource/proxy-ui/target
+proxy-ui-resource/proxy-ui/*.iml
 
 ssl-application/.idea
 ssl-application/.gradle
 ssl-application/gradle
 ssl-application/target
+ssl-application/*.iml
 
 spring-oauth2/auth-server/.idea
 spring-oauth2/auth-server/.gradle
 spring-oauth2/auth-server/gradle
 spring-oauth2/auth-server/target
+spring-oauth2/auth-server/*.iml
 
 spring-oauth2/oauth2-resource-server/.idea
 spring-oauth2/oauth2-resource-server/.gradle
 spring-oauth2/oauth2-resource-server/gradle
 spring-oauth2/oauth2-resource-server/target
+spring-oauth2/oauth2-resource-server/*.iml
 
 spring-oauth2/oauth2-ui-gateway/.idea
 spring-oauth2/oauth2-ui-gateway/.gradle
 spring-oauth2/oauth2-ui-gateway/gradle
 spring-oauth2/oauth2-ui-gateway/target
+spring-oauth2/oauth2-ui-gateway/*.iml
