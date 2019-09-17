@@ -1,0 +1,3 @@
+include 'auth-server'
+include 'oauth2-resource-server'
+include 'oauth2-ui-gateway'
