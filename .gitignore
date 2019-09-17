@@ -1,3 +1,7 @@
+.idea
+.gradle
+gradle
+
 spring-security-angular/.gradle
 spring-security-angular/gradle
 spring-security-angular/build/
@@ -50,3 +54,13 @@ spring-oauth2/auth-server/.idea
 spring-oauth2/auth-server/.gradle
 spring-oauth2/auth-server/gradle
 spring-oauth2/auth-server/target
+
+spring-oauth2/oauth2-resource-server/.idea
+spring-oauth2/oauth2-resource-server/.gradle
+spring-oauth2/oauth2-resource-server/gradle
+spring-oauth2/oauth2-resource-server/target
+
+spring-oauth2/oauth2-ui-gateway/.idea
+spring-oauth2/oauth2-ui-gateway/.gradle
+spring-oauth2/oauth2-ui-gateway/gradle
+spring-oauth2/oauth2-ui-gateway/target
