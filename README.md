@@ -14,7 +14,7 @@ Project is very basic just to understand the architecture so you might find some
 
 Please refer below architecture diagram for complete understanding.
 
-![alt text](https://github.com/vivekprm/spring-security-samples/blob/master/gateway-ui-resource/architecture-diagram.png)
+![gateway-ui-resource](https://github.com/vivekprm/spring-security-samples/blob/master/gateway-ui-resource/architecture-diagram.png)
 
 # proxy-ui-resource
 This project is same as gateway-ui-resource architecturally. However, here we are using Zuul as our gateway. Which is better than the previous approach.
@@ -33,6 +33,8 @@ Netflix uses Zuul for the following:
 * Static Response handling
 * Active/Active traffic management
 
+# spring-oauth2
+Here we are using separate auth-server for login, separate service (oauth2-resource-server) for APIs and separate service (oauth2-ui-gateway) for UI.
 
 # Angular 2
 <b>spring-security-angular</b> contains backend code in spring boot 2.1.8.
