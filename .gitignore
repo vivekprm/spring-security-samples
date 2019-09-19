@@ -29,8 +29,6 @@ spring-security-angular-backend/gradle
 gateway-ui-resource/.idea
 gateway-ui-resource/target
 gateway-ui-resource/*.iml
-gateway-ui-resource/gradlew
-gateway-ui-resource/gradlew.bat
 
 gateway-ui-resource/gateway-ui/.idea
 gateway-ui-resource/gateway-ui/target
