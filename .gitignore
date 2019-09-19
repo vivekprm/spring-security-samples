@@ -26,26 +26,46 @@ spring-security-angular-backend/target
 spring-security-angular-backend/target/
 spring-security-angular-backend/gradle
 
+gateway-ui-resource/.idea
+gateway-ui-resource/target
+gateway-ui-resource/*.iml
+
 gateway-ui-resource/gateway-ui/.idea
 gateway-ui-resource/gateway-ui/target
 gateway-ui-resource/gateway-ui/.mvn
 gateway-ui-resource/gateway-ui/*.iml
+gateway-ui-resource/gateway-ui/gradlew
+gateway-ui-resource/gateway-ui/gradlew.bat
 
 gateway-ui-resource/resourceserver/.idea
 gateway-ui-resource/resourceserver/target
 gateway-ui-resource/resourceserver/.mvn
 gateway-ui-resource/resourceserver/*.iml
+gateway-ui-resource/resourceserver/gradlew
+gateway-ui-resource/resourceserver/gradlew.bat
+
+proxy-ui-resource/.idea
+proxy-ui-resource/target
+proxy-ui-resource/*.iml
+proxy-ui-resource/gradle
+proxy-ui-resource/gradlew
+proxy-ui-resource/gradlew.bat
 
 proxy-ui-resource/proxy-resource/.idea
 proxy-ui-resource/proxy-resource/.gradle
 proxy-ui-resource/proxy-resource/gradle
 proxy-ui-resource/proxy-resource/target
 proxy-ui-resource/proxy-resource/*.iml
+proxy-ui-resource/proxy-resource/gradlew
+proxy-ui-resource/proxy-resource/gradlew.bat
+
 
 proxy-ui-resource/proxy-ui/.idea
 proxy-ui-resource/proxy-ui/.gradle
 proxy-ui-resource/proxy-ui/gradle
 proxy-ui-resource/proxy-ui/target
+proxy-ui-resource/proxy-ui/gradlew
+proxy-ui-resource/proxy-ui/gradlew.bat
 proxy-ui-resource/proxy-ui/*.iml
 
 ssl-application/.idea
@@ -60,6 +80,8 @@ spring-oauth2/auth-server/gradle
 spring-oauth2/auth-server/target
 spring-oauth2/auth-server/out
 spring-oauth2/auth-server/*.iml
+spring-oauth2/auth-server/gradlew
+spring-oauth2/auth-server/gradlew.bat
 
 spring-oauth2/oauth2-resource-server/.idea
 spring-oauth2/oauth2-resource-server/.gradle
@@ -67,6 +89,8 @@ spring-oauth2/oauth2-resource-server/gradle
 spring-oauth2/oauth2-resource-server/target
 spring-oauth2/oauth2-resource-server/out
 spring-oauth2/oauth2-resource-server/*.iml
+spring-oauth2/oauth2-resource-server/gradlew
+spring-oauth2/oauth2-resource-server/gradlew.bat
 
 spring-oauth2/oauth2-ui-gateway/.idea
 spring-oauth2/oauth2-ui-gateway/.gradle
@@ -74,6 +98,8 @@ spring-oauth2/oauth2-ui-gateway/gradle
 spring-oauth2/oauth2-ui-gateway/target
 spring-oauth2/oauth2-ui-gateway/out
 spring-oauth2/oauth2-ui-gateway/*.iml
+spring-oauth2/oauth2-ui-gateway/gradlew
+spring-oauth2/oauth2-ui-gateway/gradlew.bat
 
 spring-oauth2-jwt/auth-server/.idea
 spring-oauth2-jwt/auth-server/.gradle
@@ -81,6 +107,8 @@ spring-oauth2-jwt/auth-server/gradle
 spring-oauth2-jwt/auth-server/target
 spring-oauth2-jwt/auth-server/out
 spring-oauth2-jwt/auth-server/*.iml
+spring-oauth2-jwt/auth-server/gradlew
+spring-oauth2-jwt/auth-server/gradlew.bat
 
 spring-oauth2-jwt/oauth2-resource-server/.idea
 spring-oauth2-jwt/oauth2-resource-server/.gradle
@@ -88,6 +116,8 @@ spring-oauth2-jwt/oauth2-resource-server/gradle
 spring-oauth2-jwt/oauth2-resource-server/target
 spring-oauth2-jwt/oauth2-resource-server/out
 spring-oauth2-jwt/oauth2-resource-server/*.iml
+spring-oauth2-jwt/oauth2-resource-server/gradlew
+spring-oauth2-jwt/oauth2-resource-server/gradlew.bat
 
 spring-oauth2-jwt/oauth2-ui-gateway/.idea
 spring-oauth2-jwt/oauth2-ui-gateway/.gradle
@@ -95,3 +125,5 @@ spring-oauth2-jwt/oauth2-ui-gateway/gradle
 spring-oauth2-jwt/oauth2-ui-gateway/target
 spring-oauth2-jwt/oauth2-ui-gateway/out
 spring-oauth2-jwt/oauth2-ui-gateway/*.iml
+spring-oauth2-jwt/oauth2-ui-gateway/gradlew
+spring-oauth2-jwt/oauth2-ui-gateway/gradlew.bat
