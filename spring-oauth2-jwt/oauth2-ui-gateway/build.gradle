@@ -1,0 +1,40 @@
+plugins {
+    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+    id 'org.springframework.boot' version '1.5.6.RELEASE'
+    id 'java'
+}
+
+
+group 'oauth2-ui-gateway'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    set('springCloudVersion', "Dalston.SR2")
+}
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-security'
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.cloud:spring-cloud-starter-zuul'
+    compile 'org.springframework.cloud:spring-cloud-starter-security'
+    compile 'org.springframework.cloud:spring-cloud-starter-oauth2'
+    compile 'org.webjars:angularjs:1.4.3'
+    compile 'org.webjars:jquery:2.1.1'
+    compile 'org.webjars:bootstrap:3.2.0'
+    compile 'org.webjars:webjars-locator'
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
+    testCompile 'org.springframework.security:spring-security-test'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
+}

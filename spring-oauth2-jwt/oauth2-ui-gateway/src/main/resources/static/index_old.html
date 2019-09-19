@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Demo</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width"/>
+    <base href="/" />
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+
+</head>
+<!-- home controller referred as home -->
+<body ng-app="app" ng-controller="home as home">
+<div class="container">
+    <ul class="nav nav-pills" role="tablist">
+        <li class="active" ng-click="home.refresh()"><a href="">home</a></li>
+        <li><a href="login">login</a></li>
+        <li ng-show="authenticated"><a href="" ng-click="home.logout()">logout</a></li>
+    </ul>
+</div>
+<div class="container" ng-show="home.authenticated">
+    <p>ID: {{home.greeting.id}}</p>
+    <p>Message: {{home.greeting.msg}}</p>
+</div>
+<div class="container" ng-hide="home.authenticated">
+    <p>Please login to see the greetings.</p>
+</div>
+<script type="text/javascript" src="/webjars/angularjs/angular.min.js"></script>
+<script type="text/javascript">
+        angular.module("app", []).config(function($httpProvider) {
+            $httpProvider.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
+        }).controller("home", function($http, $location){
+            var self = this;
+
+            $http.get('user').then(function(response) {
+                if (response.data.name) {
+                    self.authenticated = true;
+                    self.refresh();
+                } else {
+                    self.authenticated = false;
+                }
+            }, function() {
+                self.authenticated = false;
+            });
+
+            self.credentials = {};
+
+            self.logout = function() {
+                $http.post('logout', {}).finally(function() {
+                    self.authenticated = false;
+                    $location.path("/");
+                });
+            }
+            self.refresh = function () {
+                $http.get('api/greeting/').then(function(response) {
+                    self.greeting = response.data;
+                });
+            }
+        });
+    </script>
+</body>
+</html>
