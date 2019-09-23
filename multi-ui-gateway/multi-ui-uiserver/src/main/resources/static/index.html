@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Demo</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width"/>
+    <base href="/" />
+    <link rel="stylesheet" type="text/css" href="ui/webjars/bootstrap/css/bootstrap.min.css" />
+    <style type="text/css">
+        [ng\:cloak], [ng-cloak], .ng-cloak {
+            display: none !important;
+        }
+    </style>
+    <script type="text/javascript" src="ui/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="ui/webjars/bootstrap/js/bootstrap.min.js"></script>
+
+</head>
+<!-- home controller referred as home -->
+<body ng-app="app" ng-controller="home as home">
+    <div class="container">
+        <ul class="nav nav-pills" role="tablist">
+            <li class="active" ng-click="home.refresh()"><a href="">Home</a></li>
+            <li ng-hide="home.authenticated"><a href="">Login</a></li>
+            <li ng-show="home.authenticated"><a href="">Logout</a></li>
+        </ul>
+    </div>
+    <div class="container" ng-show="home.authenticated">
+        <p>ID: {{home.greeting.id}}</p>
+        <p>Message: {{home.greeting.msg}}</p>
+    </div>
+    <script type="text/javascript" src="ui/webjars/angularjs/angular.min.js"></script>
+    <script type="text/javascript">
+        angular.module("app", []).config(function($httpProvider) {
+            $httpProvider.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
+        }).controller("home", function($http){
+            var self = this;
+
+            self.refresh = function () {
+                $http.get("/api/greeting").then(function(response) {
+                    self.greeting = response.data;
+                    self.authenticated=true;
+                });
+            };
+
+            self.refresh();
+        });
+    </script>
+</body>
+</html>
