@@ -19,13 +19,16 @@
 </head>
 <!-- home controller referred as home -->
 <body ng-app="app" ng-controller="home as home">
-    <div class="container">
-        <ul class="nav nav-pills" role="tablist">
-            <li class="active" ng-click="home.refresh()"><a href="">Home</a></li>
-            <li ng-hide="home.authenticated"><a href="">Login</a></li>
-            <li ng-show="home.authenticated"><a href="">Logout</a></li>
-        </ul>
-    </div>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <p>
+                <a class="navbar-brand" href='#/'><b>Home</b></a>
+            </p>
+            <p class="navbar-text navbar-right" ng-show="home.authenticated">
+                Signed in as <a href="#/" class="navbar-link">{{home.user}}</a>
+            </p>
+        </div>
+    </nav>
     <div class="container" ng-show="home.authenticated">
         <p>ID: {{home.greeting.id}}</p>
         <p>Message: {{home.greeting.msg}}</p>
@@ -37,14 +40,27 @@
         }).controller("home", function($http){
             var self = this;
 
+            $http.get('user').then(function(response) {
+                var data = response.data;
+                if (data.name) {
+                    self.authenticated = true;
+                    self.user = data.name;
+                    $http.get("/api/greeting").then(function(response) {
+                        self.greeting = response.data;
+                    })
+                } else {
+                    self.authenticated = false;
+                }
+            }, function() {
+                self.authenticated = false;
+            });
+
             self.refresh = function () {
                 $http.get("/api/greeting").then(function(response) {
                     self.greeting = response.data;
                     self.authenticated=true;
                 });
             };
-
-            self.refresh();
         });
     </script>
 </body>
