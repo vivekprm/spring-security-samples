@@ -1,3 +1,5 @@
 include 'multi-ui-gateway'
 include 'multi-ui-resourceserver'
 include 'multi-ui-uiserver'
+include 'multi-ui-admin'
+

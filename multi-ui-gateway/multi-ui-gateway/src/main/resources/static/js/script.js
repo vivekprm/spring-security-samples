@@ -12,16 +12,19 @@ angular.module('gateway', []).config(function($httpProvider) {
         $http.get('user', {
             headers : headers
         }).then(function(response) {
-            if (response.data.name) {
+            var data = response.data;
+            if (data.name) {
                 self.authenticated = true;
-                self.user = response.data.name;
+                self.user = data.name;
+                self.admin = data && data.roles && data.roles.indexOf("ROLE_ADMIN")>-1;
             } else {
                 self.authenticated = false;
+                self.admin = false;
             }
-            callback && callback();
+            callback && callback(true);
         }, function() {
             self.authenticated = false;
-            callback && callback();
+            callback && callback(false);
         });
     };
 
@@ -43,10 +46,10 @@ angular.module('gateway', []).config(function($httpProvider) {
         })
     };
 
-    // We need CSRF because we are using http post.
-    self.logout = function () {
-        $http.post("/logout").then(function() {
+    self.logout = function() {
+        $http.post('logout', {}).finally(function() {
             self.authenticated = false;
+            self.admin = false;
         });
     }
 });

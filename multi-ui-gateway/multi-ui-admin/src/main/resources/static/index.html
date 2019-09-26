@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+    <title>Hello Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="admin/webjars/bootstrap/css/bootstrap.min.css" />
+    <style type="text/css">
+        [ng\:cloak], [ng-cloak], .ng-cloak {
+            display: none !important;
+        }
+    </style>
+    <script type="text/javascript" src="admin/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="admin/webjars/bootstrap/js/bootstrap.min.js"></script>
+</head>
+
+<body ng-app="admin" ng-cloak class="ng-cloak" ng-controller="home as home">
+<div class="navbar navbar-default">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav">
+            <li><a class="navbar-primary" href='#/' ng-click="home.home()">Home</a></li>
+            <li><a class="navbar-primary" href='#/' ng-click="home.changes()">Changes</a></li>
+        </ul>
+        <p class="navbar-text navbar-right" ng-show="home.authenticated">
+            Signed in as <a href="#/" class="navbar-link">{{home.user.name}}</a>
+        </p>
+    </div>
+</div>
+<div class="container">
+    <h1>Admin</h1>
+    <div ng-show="home.authenticated" ng-include="home.template"></div>
+    <div ng-show="!home.authenticated" ng-include="'unauthenticated.html'"></div>
+</div>
+<script type="text/javascript" src="admin/webjars/angularjs/angular.min.js"></script>
+<script src="admin/js/admin.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,17 +1,18 @@
 server:
   port: 8084
 zuul:
-  sensitive-headers:
   routes:
     resource:
       path: /api/**
       url: http://localhost:9000/api
+      sensitive-headers:
     ui:
       url: http://localhost:8082
+      sensitive-headers:
+    admin:
+      url: http://localhost:8083
+      sensitive-headers:
 security:
-  user:
-    password:
-      password
   sessions: ALWAYS
 spring:
   session:

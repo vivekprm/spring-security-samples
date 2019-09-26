@@ -50,6 +50,9 @@
     <div class="container" ng-show="nav.authenticated">
         <a class="btn btn-primary" href="/ui/">Go To User Interface</a>
     </div>
+    <div class="container" ng-show="nav.authenticated && nav.admin">
+        <a class="btn btn-primary" href="/admin/">Go To Admin Interface</a>
+    </div>
     <script type="text/javascript" src="/webjars/angularjs/angular.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
